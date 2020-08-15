@@ -32,7 +32,24 @@ public class ZkServiceRegistry implements ServiceRegistry {
         return a;
     }
 
+    public static int getInt2() {
+        int a = 10;
+        try {
+            System.out.println(a / 0);
+            a = 20;
+        } catch (ArithmeticException e) {
+            a = 30;
+            return a;
+        } finally {
+            a = 40;
+            //如果这样，就又重新形成了一条返回路径，由于只能通过1个return返回，所以这里直接返回40
+            return a;
+        }
+
+    }
+
     public static void main(String[] args) {
         System.out.println(getInt());
+        System.out.println(getInt2());
     }
 }
