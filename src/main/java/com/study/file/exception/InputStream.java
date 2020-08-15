@@ -21,12 +21,13 @@ public class InputStream {
         } catch (IOException e) {
             System.out.println(e);
         }finally {
-            try {
-                if(inputStream != null){
+            if(inputStream != null){
+                try {
                     inputStream.close();
+
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
-            } catch (IOException e) {
-                e.printStackTrace();
             }
         }
     }
