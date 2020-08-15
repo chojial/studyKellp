@@ -38,7 +38,7 @@ public class InputStream {
      */
     public static void automaticallyCloseResource() {
         File file = new File("./tmp.txt");
-        try (FileInputStream inputStream = new FileInputStream(file);) {
+        try (FileInputStream inputStream = new FileInputStream(file)) {
             // use the inputStream to read a file
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -48,6 +48,7 @@ public class InputStream {
             System.out.println(e);
         }
     }
+
 
     public static void main(String[] args) {
 //        doNotCloseResourceInTry();
