@@ -32,7 +32,25 @@ public class InputStream {
         }
     }
 
+
+    /**
+     *  Java 7 的 try-with-resource 语法
+     */
+    public static void automaticallyCloseResource() {
+        File file = new File("./tmp.txt");
+        try (FileInputStream inputStream = new FileInputStream(file);) {
+            // use the inputStream to read a file
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            System.out.println(e);
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println(e);
+        }
+    }
+
     public static void main(String[] args) {
-        doNotCloseResourceInTry();
+//        doNotCloseResourceInTry();
+        automaticallyCloseResource();
     }
 }
