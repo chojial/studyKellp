@@ -1,4 +1,4 @@
-package com.study.file.thread;
+package com.study.file.thread.threadLock;
 
 /**
  * 子线程需要使用存放在threadLocal变量中的用户登陆信息；
