@@ -4,7 +4,7 @@ import com.study.file.registry.ServiceDiscovery;
 import com.study.file.registry.zk.util.CuratorUtils;
 import com.study.file.registry.zk.util.LoadBalance;
 import com.study.file.registry.zk.util.RandomLoadBalance;
-import lombok.extern.slf4j.Slf4j;
+
 import org.apache.curator.framework.CuratorFramework;
 
 import java.net.InetSocketAddress;
